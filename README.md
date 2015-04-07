@@ -1,7 +1,8 @@
 Sailfish/Mer image build scripts
 --------------------------------
 
-The set of scripts aims to help preparing Sailfish/Mer images for the Nexus 5 pocket computer in a clean, easy and reprodicible way. They have been largely written by following [the guide](http://releases.sailfishos.org/sfa-ea/2014-07-21_SailfishOSHardwareAdaptationDevelopmentKit.pdf), [the wiki](https://wiki.merproject.org/wiki/Building_Sailfish_OS_for_Nexus_5) and advice from alin, sledges, vgrade and others in #sailfishos-porters at irc.freenode.org.
+The set of scripts aims to help preparing Sailfish/Mer images for the Sony Xperia Z pocket computer in a clean, easy and reprodicible way. They are mostly based on https://github.com/dmt4/sfa-mer.
+While I use them for my builds of the yuga images, they should be usable for any device, if you put the nessecary information to the folder device/$VENDOR.
 
 ## Instructions
 
@@ -50,6 +51,13 @@ last alpha5 for hammerhead
 update10
 ```
 
+```
+current for yuga
+./fullbuild.sh -mer-root $HOME/build/yuga/mer -android-root $HOME/build/droid \
+-branch hybris-11.0 -device yuga -vendor sony \
+-dest $HOME/build/yuga-done -sfrelease 1.1.2.16 \
+-extraname oleid -jobs 4
+```
 
 ## License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
