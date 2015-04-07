@@ -158,7 +158,7 @@ if repo_is_unset "$MW_REPO"; then
     ${TOOLDIR}/pkgbuild.sh "https://github.com/mer-packages/sensorfw.git" rpm/sensorfw-qt5-hybris.spec || die
     ${TOOLDIR}/pkgbuild.sh ngfd-plugin-droid-vibrator || die
     ${TOOLDIR}/pkgbuild.sh qt5-feedback-haptics-droid-vibrator || die
-    ${TOOLDIR}/pkgbuild.sh pulseaudio-modules-droid || die
+    ${TOOLDIR}/pkgbuild.sh "https://github.com/oleid/pulseaudio-modules-droid.git" || die
     ${TOOLDIR}/pkgbuild.sh "https://github.com/nemomobile/dsme.git" || die
     ${TOOLDIR}/pkgbuild.sh "https://github.com/nemomobile/mce-plugin-libhybris.git" || die
 
