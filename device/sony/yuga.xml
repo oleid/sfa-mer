@@ -2,16 +2,22 @@
 <manifest>
 <project path="device/sony/common" name="CyanogenMod/android_device_sony_common" revision="cm-11.0" />
 <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" revision="cm-11.0" />
-<project path="device/sony/fusion3-common" name="CyanogenMod/android_device_sony_fusion3-common" revision="cm-11.0"/>
+
+<!-- use repo with fix for Sony's trim daemon to make the modem work -->
+<project path="device/sony/fusion3-common" name="oleid/android_device_sony_fusion3-common" revision="cm-11.0"/>
+
 <project path="device/sony/qcom-common" name="CyanogenMod/android_device_sony_qcom-common" revision="cm-11.0" />
 <project path="device/sony/yuga" name="CyanogenMod/android_device_sony_yuga" revision="cm-11.0" />
 <project path="kernel/sony/apq8064" name="oleid/android_kernel_sony_apq8064" revision="cm-11.0" />
+<!-- project path="kernel/sony/apq8064" name="oleid/kernel_10_4_B_0_569" revision="kk44_3_4_lts" / -->
 <project path="vendor/sony" name="TheMuppets/proprietary_vendor_sony" revision="cm-11.0" />
 <project path="device/sony/msm8960-common" name="CyanogenMod/android_device_sony_msm8960-common" revision="cm-11.0" />
 
-<!-- use patched version of libhwcomposer to prevent hanging of test_hwcomp -->
+<!-- not only not nessecary anymore when using later cm11, it even corrupts the graphics, even on cm11
+     use patched version of libhwcomposer to prevent hanging of test_hwcomp
 <remove-project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" groups="caf" />
 <project path="hardware/qcom/display-caf" name="oleid/android_hardware_qcom_display-caf" revision="cm-11.0" />
+-->
 
 <!-- repo with build-fix for yuga -->
 <remove-project path="system/vold" name="CyanogenMod/android_system_vold" groups="pdk" />
